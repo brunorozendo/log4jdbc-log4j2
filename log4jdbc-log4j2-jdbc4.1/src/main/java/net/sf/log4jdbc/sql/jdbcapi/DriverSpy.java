@@ -166,7 +166,10 @@ public class DriverSpy implements Driver
 			subDrivers.add("oracle.jdbc.OracleDriver");
 			subDrivers.add("com.sybase.jdbc2.jdbc.SybDriver");
 			subDrivers.add("net.sourceforge.jtds.jdbc.Driver");
-
+			subDrivers.add("com.ibm.db2.jcc.DB2Driver");
+			subDrivers.add("COM.ibm.db2.jdbc.app.DB2Driver", db2);
+        		subDrivers.add("COM.ibm.db2.jdbc.net.DB2Driver", db2);
+			
 			// MS driver for Sql Server 2000
 			subDrivers.add("com.microsoft.jdbc.sqlserver.SQLServerDriver");
 
@@ -227,9 +230,9 @@ public class DriverSpy implements Driver
 				sqlServer);
 		rdbmsSpecifics.put("weblogic.jdbc.sqlserver.SQLServerDriver", sqlServer);
 		rdbmsSpecifics.put("com.mysql.jdbc.Driver", mySql);
-        rdbmsSpecifics.put("com.ibm.db2.jcc.DB2Driver", db2);
-        rdbmsSpecifics.put("COM.ibm.db2.jdbc.app.DB2Driver", db2);
-        rdbmsSpecifics.put("COM.ibm.db2.jdbc.net.DB2Driver", db2);
+       	 	rdbmsSpecifics.put("com.ibm.db2.jcc.DB2Driver", db2);
+        	rdbmsSpecifics.put("COM.ibm.db2.jdbc.app.DB2Driver", db2);
+        	rdbmsSpecifics.put("COM.ibm.db2.jdbc.net.DB2Driver", db2);
 
 		log.debug("DriverSpy initialization done.");
 	}
